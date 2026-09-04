@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dy13a2ten3d52"]
+
+[ext_resource type="Texture2D" uid="uid://yjtytw6och4d" path="res://Sprites/RedBullet.png" id="1_6u1g1"]
+[ext_resource type="Script" uid="uid://i6pxv7vm4y5w" path="res://Scripts/SimpleBullet.cs" id="1_clh0g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_clh0g"]
+radius = 13.0
+
+[node name="SimpleBullet" type="CharacterBody2D" unique_id=221754734 groups=["bullet"]]
+collision_layer = 4
+collision_mask = 97
+script = ExtResource("1_clh0g")
+
+[node name="RedBullet" type="Sprite2D" parent="." unique_id=1464514564]
+texture = ExtResource("1_6u1g1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=332033862]
+shape = SubResource("CircleShape2D_clh0g")

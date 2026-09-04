@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bceqin8tppvf8"]
+
+[ext_resource type="PackedScene" uid="uid://d1lgjjgugnkvd" path="res://Scenes/player_character.tscn" id="1_52fb6"]
+[ext_resource type="Script" uid="uid://dnnkjn5sa81o2" path="res://Scripts/GameManager.cs" id="1_maf8m"]
+[ext_resource type="PackedScene" uid="uid://8iplssasnqec" path="res://Scenes/LevelPlatform.tscn" id="2_6l7je"]
+[ext_resource type="PackedScene" uid="uid://capn7fpegk61a" path="res://Scenes/timer_bar.tscn" id="3_jv6wh"]
+[ext_resource type="PackedScene" uid="uid://bxsejkqt7as17" path="res://Scenes/lose_screen.tscn" id="4_x6ack"]
+[ext_resource type="PackedScene" uid="uid://3grkki7wd4s4" path="res://Scenes/win_screen.tscn" id="5_iacmt"]
+[ext_resource type="PackedScene" uid="uid://dbrrbx8swkh1s" path="res://Scenes/target.tscn" id="6_6ev3c"]
+
+[node name="MainScene" type="Node2D" unique_id=221457106]
+
+[node name="GameManager" type="Node2D" parent="." unique_id=1811776285 node_paths=PackedStringArray("_timerBar", "_gameOverScreen", "_winScreen")]
+script = ExtResource("1_maf8m")
+_timerBar = NodePath("../GUI/TimerBar")
+_gameOverScreen = NodePath("../GUI/LoseScreen")
+_winScreen = NodePath("../GUI/WinScreen")
+
+[node name="PlayerCharacter" parent="." unique_id=1190627646 instance=ExtResource("1_52fb6")]
+position = Vector2(530, -377)
+
+[node name="LevelPlatform" parent="." unique_id=747146166 instance=ExtResource("2_6l7je")]
+position = Vector2(-18, -175)
+rotation = 0.35430184
+scale = Vector2(0.5, 0.5)
+
+[node name="LevelPlatform2" parent="." unique_id=819550903 instance=ExtResource("2_6l7je")]
+position = Vector2(-710, 45)
+rotation = 1.5707964
+
+[node name="LevelPlatform3" parent="." unique_id=1654924085 instance=ExtResource("2_6l7je")]
+position = Vector2(1700, 45)
+rotation = 1.5707964
+
+[node name="LevelPlatform4" parent="." unique_id=1157027611 instance=ExtResource("2_6l7je")]
+position = Vector2(1000, -700)
+
+[node name="LevelPlatform5" parent="." unique_id=1250039281 instance=ExtResource("2_6l7je")]
+position = Vector2(-500, -700)
+
+[node name="LevelPlatform6" parent="." unique_id=692729974 instance=ExtResource("2_6l7je")]
+position = Vector2(1000, 700)
+
+[node name="LevelPlatform7" parent="." unique_id=1532336985 instance=ExtResource("2_6l7je")]
+position = Vector2(-500, 700)
+
+[node name="LevelPlatform8" parent="." unique_id=1221119632 instance=ExtResource("2_6l7je")]
+position = Vector2(714, 185)
+rotation = 2.300344
+scale = Vector2(0.5, 0.5)
+
+[node name="LevelPlatform9" parent="." unique_id=1316301878 instance=ExtResource("2_6l7je")]
+position = Vector2(1301, -208)
+rotation = -1.6824973
+scale = Vector2(0.7, 0.7)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2032315865]
+position = Vector2(501, -5)
+zoom = Vector2(0.5, 0.5)
+
+[node name="GUI" type="Control" parent="." unique_id=433499567]
+layout_mode = 3
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -652.0
+offset_top = -654.0
+offset_right = 116.66675
+offset_bottom = -228.33334
+grow_vertical = 2
+scale = Vector2(3, 3)
+
+[node name="TimerBar" parent="GUI" unique_id=1971962027 instance=ExtResource("3_jv6wh")]
+layout_mode = 1
+offset_left = 1.0
+offset_top = 1.5258789e-05
+offset_right = 20.665894
+offset_bottom = 26.896454
+
+[node name="LoseScreen" parent="GUI" unique_id=1730317984 instance=ExtResource("4_x6ack")]
+layout_mode = 1
+anchors_preset = -1
+scale = Vector2(0.7, 0.7)
+
+[node name="WinScreen" parent="GUI" unique_id=142971331 instance=ExtResource("5_iacmt")]
+custom_maximum_size = Vector2(0, 0)
+layout_mode = 1
+anchors_preset = -1
+offset_left = 0.66666126
+offset_right = 0.66666126
+scale = Vector2(0.7, 0.7)
+
+[node name="Target" parent="." unique_id=1870987664 instance=ExtResource("6_6ev3c")]
+position = Vector2(-405, -21)
+
+[node name="Target2" parent="." unique_id=1046111935 instance=ExtResource("6_6ev3c")]
+position = Vector2(53, 462)
+
+[node name="Target3" parent="." unique_id=1908605373 instance=ExtResource("6_6ev3c")]
+position = Vector2(870, 454)
+
+[node name="Target4" parent="." unique_id=1147270165 instance=ExtResource("6_6ev3c")]
+position = Vector2(1518, 354)

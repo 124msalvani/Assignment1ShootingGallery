@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbrrbx8swkh1s"]
+
+[ext_resource type="Script" uid="uid://b0uyusf13dsmt" path="res://Scripts/Target.cs" id="1_ls7vh"]
+[ext_resource type="Texture2D" uid="uid://6tunw4mpskof" path="res://icon.svg" id="1_vq1qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ghci8"]
+
+[node name="Target" type="StaticBody2D" unique_id=1870987664 groups=["target_group"]]
+collision_mask = 7
+script = ExtResource("1_ls7vh")
+
+[node name="TargetSprite" type="Sprite2D" parent="." unique_id=2072568868]
+texture = ExtResource("1_vq1qf")
+
+[node name="TargetCollision" type="CollisionShape2D" parent="." unique_id=529509944]
+scale = Vector2(7, 7)
+shape = SubResource("RectangleShape2D_ghci8")
