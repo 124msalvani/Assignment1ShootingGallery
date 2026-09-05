@@ -15,7 +15,6 @@ using System;
 
 public partial class StartScreen : Control
 {
-    //Google Godot C# How to switch scenes
 
     [Export]
     private Button _startButton;
@@ -38,6 +37,7 @@ public partial class StartScreen : Control
 */
     public void SwitchToNextScene()
     {
+        //Google Godot C# How to switch scenes
         // Automatically frees the current scene and loads the new one
         GetTree().ChangeSceneToFile("res://Scenes/main_scene.tscn");
 

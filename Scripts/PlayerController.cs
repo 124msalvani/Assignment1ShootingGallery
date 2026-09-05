@@ -14,6 +14,7 @@
 using Godot;
 using System;
 
+//Most code reused from Shootio Project
 public partial class PlayerController : CharacterBody2D
 {
     public const float UnitsPerMeter = 200; //something you do in preproduction

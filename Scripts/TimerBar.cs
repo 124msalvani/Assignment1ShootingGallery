@@ -24,6 +24,7 @@
 using Godot;
 using System;
 
+//Google Godot C# Timer
 public partial class TimerBar : Control
 {
     [Export]
@@ -32,10 +33,9 @@ public partial class TimerBar : Control
     [Export]
     private Timer _timer;
 
-    //Boolean to let GM know if time is up
+    //Boolean to let GameManager know if time is up
     private bool _isTimedOut = false;
 
-    //Google C# Godot Timer
 
  /* 
 * Name: _Ready

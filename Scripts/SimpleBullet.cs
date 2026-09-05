@@ -13,6 +13,7 @@ using Godot;
 using System;
 using System.Security.Cryptography.X509Certificates;
 
+//Most code reused from Shootio Project
 public partial class SimpleBullet : CharacterBody2D
 {
     public Vector2 BulletVelocity { get; set; }
